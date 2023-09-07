@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,500;1,200&display=swap');
+@import "_var.scss";
+@import "_mixin.scss";
+
+* {
+	box-sizing: border-box;
+	
+	margin: 0;
+	padding: 0;
+	
+	font-family: $myFont;
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: 100vh;
+	
+	background: $bg1;
+	color: $text;
+	
+	
+	.calc {
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
+			-5px -5px 10px rgba(70, 70, 70, 0.12);
+		
+		width: 400px;
+		height: 550px;
+		padding: 20px;
+		
+		background: $bg2;
+		
+		
+		.screen {
+			border-radius: 5px;
+			box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15),
+				-5px -5px 10px rgba(70, 70, 70, 0.12);
+			
+			width: 100%;
+			height: 100px;
+			margin-bottom: 20px;
+			
+			
+			input {
+				border: none;
+				outline: none;
+				
+				width: 100%;
+				height: 100%;
+				padding: 15px;
+				
+				background: transparent;
+				color: $text;
+				
+				font-size: 2rem;
+				text-align: right;
+			}
+		}
+		
+		
+		.keyboard {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			grid-template-areas: 
+				"clear clear div  mul"
+				"num7  num8  num9 minus"
+				"num4  num5  num6 plus"
+				"num1  num2  num3 equal"
+				"num0  num0  dot  equal"
+				;
+			grid-gap: 20px;
+			
+			width: 100%;
+			height: 390px;
+			
+			
+			.btn {
+				border: none;
+				border-radius: 10px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
+					-5px -5px 10px rgba(70, 70, 70, 0.12);
+				
+				background: transparent;
+				color: $text;
+				
+				font-size: 1.5rem;
+				
+				
+				&:active {
+					box-shadow: 
+						1px 1px 3px rgba(0, 0, 0, 0.15),
+						-4px -4px 10px rgba(70, 70, 70, 0.12),
+						2px 2px 4px rgba(0, 0, 0, 0.15)
+						;
+				}
+				
+				
+				&#clear {grid-area: clear; color: #c29339; font-weight: 500;}
+				&#equal {grid-area: equal; color: #c29339; font-weight: 500;}
+				
+				&#div   {grid-area: div;}
+				&#mul   {grid-area: mul;}
+				&#minus {grid-area: minus;}
+				&#plus  {grid-area: plus;}
+				&#dot   {grid-area: dot;}
+				
+				&#num9 {grid-area: num9;}
+				&#num8 {grid-area: num8;}
+				&#num7 {grid-area: num7;}
+				&#num6 {grid-area: num6;}
+				&#num5 {grid-area: num5;}
+				&#num4 {grid-area: num4;}
+				&#num3 {grid-area: num3;}
+				&#num2 {grid-area: num2;}
+				&#num1 {grid-area: num1;}
+				&#num0 {grid-area: num0;}
+			}
+		}
+	}
+}

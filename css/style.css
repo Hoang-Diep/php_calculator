@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,500;1,200&display=swap");
+/* line 5, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px; }
+
+/* line 15, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #191919;
+  color: #fff; }
+  /* line 27, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+  body .calc {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(70, 70, 70, 0.12);
+    width: 400px;
+    height: 550px;
+    padding: 20px;
+    background: #282828; }
+    /* line 39, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+    body .calc .screen {
+      border-radius: 5px;
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(70, 70, 70, 0.12);
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px; }
+      /* line 49, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+      body .calc .screen input {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: transparent;
+        color: #fff;
+        font-size: 2rem;
+        text-align: right; }
+    /* line 66, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+    body .calc .keyboard {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas: "clear clear div  mul" "num7  num8  num9 minus" "num4  num5  num6 plus" "num1  num2  num3 equal" "num0  num0  dot  equal";
+      grid-gap: 20px;
+      width: 100%;
+      height: 390px; }
+      /* line 83, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+      body .calc .keyboard .btn {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(70, 70, 70, 0.12);
+        background: transparent;
+        color: #fff;
+        font-size: 1.5rem; }
+        /* line 95, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn:active {
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15), -4px -4px 10px rgba(70, 70, 70, 0.12), 2px 2px 4px rgba(0, 0, 0, 0.15); }
+        /* line 104, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#clear {
+          grid-area: clear;
+          color: #c29339;
+          font-weight: 500; }
+        /* line 105, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#equal {
+          grid-area: equal;
+          color: #c29339;
+          font-weight: 500; }
+        /* line 107, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#div {
+          grid-area: div; }
+        /* line 108, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#mul {
+          grid-area: mul; }
+        /* line 109, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#minus {
+          grid-area: minus; }
+        /* line 110, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#plus {
+          grid-area: plus; }
+        /* line 111, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#dot {
+          grid-area: dot; }
+        /* line 113, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num9 {
+          grid-area: num9; }
+        /* line 114, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num8 {
+          grid-area: num8; }
+        /* line 115, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num7 {
+          grid-area: num7; }
+        /* line 116, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num6 {
+          grid-area: num6; }
+        /* line 117, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num5 {
+          grid-area: num5; }
+        /* line 118, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num4 {
+          grid-area: num4; }
+        /* line 119, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num3 {
+          grid-area: num3; }
+        /* line 120, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num2 {
+          grid-area: num2; }
+        /* line 121, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num1 {
+          grid-area: num1; }
+        /* line 122, ../../xampp/htdocs/phpTrain/php004/css/style.scss */
+        body .calc .keyboard .btn#num0 {
+          grid-area: num0; }
+
+/*# sourceMappingURL=style.css.map */
